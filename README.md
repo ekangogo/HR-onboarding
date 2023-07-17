@@ -1,10 +1,10 @@
-# creation of employee IDs official employee emails
+# creation of employee IDs and official employee emails
 ####The project is an automation whereby a user is asked to enter their details then those details are used to fill out the form on the website. employee IDs as well as the official employee email is generated upon submission of the inputed details.
 #### By **Ezekiel Kangogo**
 ## Description
 access the Main XamlDocument via UiPath to view the automation.
 https://github.com/ekangogo/HR-onboarding.git
-My automation's purpose is to create an automation using UiPath sequence where the robot creates employee IDs official employee emails. The generated employee IDs and Emails are saved in a NotePad application with file name as Employee details. 
+My automation's purpose is to create an automation using UiPath sequence where the robot creates employee IDs and official employee emails. The generated employee IDs and Emails are saved in a NotePad application with file name as Employee details. 
 ## Setup/Installation Requirements
 access via UiPath
 https://github.com/ekangogo/HR-onboarding.git
