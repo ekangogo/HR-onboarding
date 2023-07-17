@@ -129,7 +129,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[firstName.IsNumeric() = true OR string.IsNullOrEmpty(firstName) = true]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
@@ -137,18 +137,15 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_9" IsPassword="False" Label="enter your first name" Title="First Name">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_9" IsPassword="False" Label="Please enter your first name" Title="First Name">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="firstName.IsNumeric() = true OR string.IsNullOrEmpty(firstName) = true" />
-      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_4">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[string.IsNullOrEmpty(lastName) = true OR lastName.IsNumeric() = true]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_4">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
@@ -156,18 +153,15 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="enter your last name" Title="Last Name">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="Please enter your last name" Title="Last Name">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="string.IsNullOrEmpty(lastName) = true OR lastName.IsNumeric() = true" />
-      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[string.IsNullOrEmpty(DOB) = true OR DOB.IsNumeric() = false]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
@@ -175,18 +169,15 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_8" IsPassword="False" Label="enter your DOB" Title="DOB">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_8" IsPassword="False" Label="Please enter your DOB" Title="DOB">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[DOB]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="string.IsNullOrEmpty(DOB) = true OR DOB.IsNumeric() = false" />
-      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[string.IsNullOrEmpty(Designation) = true OR Designation.IsNumeric() = true]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <sap:WorkflowViewStateService.ViewState>
@@ -194,18 +185,15 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_11" IsPassword="False" Label="enter your Designation" Title="Designation">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_11" IsPassword="False" Label="Please enter your Designation" Title="Designation">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[Designation]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="string.IsNullOrEmpty(Designation) = true OR Designation.IsNumeric() = true" />
-      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[phoneNumber.IsNumeric() = false Or string.IsNullOrEmpty(phoneNumber) = true]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="580,463" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,327" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
@@ -213,18 +201,15 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="enter you phone number" Title="phone Number">
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,239" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="Please enter you phone number" Title="phone Number">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">[phoneNumber]</OutArgument>
             </ui:InputDialog.Result>
           </ui:InputDialog>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="phoneNumber.IsNumeric() = false Or string.IsNullOrEmpty(phoneNumber) = true" />
-      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="580,292" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="select your Gender" OptionsString="Male;Female" Title="Gender">
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="580,292" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Please select your Gender" OptionsString="Male;Female" Title="Gender">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[Gender]</OutArgument>
       </ui:InputDialog.Result>
